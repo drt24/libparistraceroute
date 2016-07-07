@@ -742,6 +742,8 @@ bool network_drop_expired_flying_probe(network_t * network)
         ret = network_update_next_timeout(network);
     } else {
         fprintf(stderr, "network_drop_expired_flying_probe: a probe has expired, but there are no more flying probes!\n");
+        // Need to ensure that the timeout is reset or we will loop on this error.
+        network_update_next_timeout(network);
     }
 
     return ret;
