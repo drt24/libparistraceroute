@@ -17,7 +17,7 @@
 #include "queue.h"
 #include "options.h"     // option_t
 #include "probe.h"       // probe_extract_ext, probe_set_field_ext
-#include "algorithm.h"   // pt_algorithm_throw
+#include "algorithm.h"   // pt_throw
 
 // TODO static variable as timeout. Control extra_delay and timeout values consistency
 #define EXTRA_DELAY 0.01 // this extra delay provokes a probe timeout event if a probe will expires in less than EXTRA_DELAY seconds. Must be less than network->timeout.

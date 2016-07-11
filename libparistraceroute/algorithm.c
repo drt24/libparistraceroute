@@ -326,7 +326,7 @@ void pt_throw(
             dynarray_push_element(loop->events_user, event);
             eventfd_write(loop->eventfd_user, 1);
         } else {
-            fprintf(stderr, "pt_algorithm_throw: event ignored\n");
+            fprintf(stderr, "pt_throw: event ignored\n");
         }
     }
 }
